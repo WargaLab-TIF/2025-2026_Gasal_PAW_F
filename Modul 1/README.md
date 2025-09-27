@@ -1,9 +1,10 @@
-Tugas Modul 2
+# Tugas Modul 1
 
-Buat Folder Sesuai nim dan nama kalian
+## Buat Folder Sesuai nim dan nama kalian
 
-Modul-2/
-│ └── 24-000_Fulan_Bin_Fulan/
-│ ├── Tugas-1.php
-│ ├── other.php
-│ └── ...
+Modul-2/  
+│   └── 24-000_Fulan_Bin_Fulan/  
+│       ├── Tugas-1.php  
+│       ├── other.php  
+│       └── ...  
+
