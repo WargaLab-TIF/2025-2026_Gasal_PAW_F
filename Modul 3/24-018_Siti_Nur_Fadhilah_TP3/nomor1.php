@@ -1,7 +1,7 @@
 <?php
 $fruits = array("Avocado", "Blueberry", "Cherry");
 
-// Tambahkan 5 data baru
+// Tambahkan 5 data baru.
 array_push($fruits, "Durian", "Mango", "Orange", "Pineapple", "Strawberry");
 
 echo"Nomor 3.1.1 :<br>";
@@ -47,3 +47,4 @@ foreach ($veggies as $sayur) {
 }
 
 ?>
+
