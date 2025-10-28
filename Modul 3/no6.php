@@ -5,7 +5,7 @@ $hewan = ["kelinci", "sapi", "kerbau"];
 array_push($hewan, "ayam", "bebek");
 
 var_dump($hewan);
-echo "<br>";
+echo "<br>.";
 
 // 3.6.2
 $sayur = ["bayam", "wortel"];
