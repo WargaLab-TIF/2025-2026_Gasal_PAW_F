@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Data Pribadi</title>
+</head>
+<body>
+  <h1>Form Data Pribadi</h1>
+
+  <form action="processData.php" method="post">
+    
+    <p>
+      <label>surname:</label><br>
+      <input type="text" name="surname">
+    </p>
+
+
+    <p>
+      <label>Email address:</label><br>
+      <input type="email" name="email">
+    </p>
+
+    <p>
+      <label>Password:</label><br>
+      <input type="password" name="password">
+    </p>
+
+    <p>
+      <label>Street Address:</label><br>
+      <textarea name="street" rows="3" cols="35"></textarea>
+    </p>
+
+    <p>
+      <label>State:</label><br>
+      <select name="state">
+        <option value="">-----pilih-----</option>
+        <option>Jawa Timur</option>
+        <option>Jawa Tengah</option>
+        <option>Jawa Barat</option>
+        <option>DKI Jakarta</option>
+        <option>Bali</option>
+      </select>
+    </p>
+
+    <input type="hidden" name="country" value="Indonesia">
+
+    <p>
+      <label>Gender:</label><br>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Male"> Male</label>
+    </p>
+
+    <p>
+      <label>Hobi:</label><br>
+      <label><input type="checkbox" name="hobi[]" value="abisin duit" > abisin duit</label><br>
+      <label><input type="checkbox" name="hobi[]" value="liat tiktok"> liat tiktok</label>
+    </p>
+
+    <p><button type="submit">Kirim</button></p>
+  </form>
+</body>
+</html>
