@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Data Supplier</title>
+    <title>Tambah Data</title>
 </head>
 <body>
-<h2>Tambah Data Supplier</h2>
+<h2>Tambah Data</h2>
 
 <form method="POST">
     Nama:<br>
