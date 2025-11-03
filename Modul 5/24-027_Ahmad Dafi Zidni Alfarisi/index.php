@@ -20,7 +20,6 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <title>Data Supplier</title>
     </head>
     <body>
-        <h2>Data Master Supplier</h2>
         <a href="tambah.php">Tambah Data</a><br><br>
 
         <table border="1" cellpadding="5" cellspacing="0">
