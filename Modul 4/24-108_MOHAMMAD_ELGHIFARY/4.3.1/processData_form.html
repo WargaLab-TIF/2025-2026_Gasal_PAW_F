@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-108_MOHAMMAD ELGHIFARY</title>
+</head>
+<body>
+    <form action="processData.php" method="post">
+        <label for="username">username</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="Email address">email</label><br>
+        <input type="email" id="Email address" name="Email address"><br>
+        <label for="Password">password</label><br>
+        <input type="password" id="Password" name="Password"><br>
+        <label for="Street Address">alamat</label><br>
+        <textarea id="Street Address" name="Street Address"></textarea><br>
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="jawa-timur">Jawa Timur</option>
+            <option value="jawa-tengah">Jawa Tengah</option>
+            <option value="jawa-barat">Jawa Barat</option>
+            <option value="bali">Bali</option>
+        </select>
+        <br>
+        <label for="country">country</label>
+        <input type="hidden" id="country" name="country" value="Indonesia"><br><br>
+        <label>Kelamin</label><br>
+        <input type="radio" id="Laki-Laki" name="gender" value="Laki-Laki">
+        <label for="Laki-Laki">Laki-Laki</label>
+        <input type="radio" id="Perempuan" name="gender" value="Perempuan">
+        <label for="Perempuan">Perempuan</label><br><br>
+        <label>Hobi:</label><br>
+        <input type="checkbox" id="Mancing" name="hobby" value="Mancing">
+        <label for="Mancing">Mancing</label><br>
+        <input type="checkbox" id="Tidur" name="hobby" value="Tidur" checked>
+        <label for="Tidur">Tidur</label><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
