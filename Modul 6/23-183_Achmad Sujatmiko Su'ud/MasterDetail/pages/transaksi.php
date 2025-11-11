@@ -13,7 +13,6 @@
   <a href="barang.php">Barang</a>
   <a href="transaksi.php" class="active">Transaksi</a>
   <a href="transaksi_detail.php">Transaksi Detail</a>
-  <div class="logout"><a href="#" style="color:white;text-decoration:none;">Logout</a></div>
 </div>
 
 <div class="main-content">
