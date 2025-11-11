@@ -9,4 +9,3 @@ if (mysqli_num_rows($cek) > 0) {
     mysqli_query($conn, "DELETE FROM barang WHERE id='$id'");
     echo "<script>alert('Barang berhasil dihapus!');window.location='barang.php';</script>";
 }
-?>
