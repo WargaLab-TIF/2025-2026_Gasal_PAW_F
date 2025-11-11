@@ -1,0 +1,172 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    background-color: #121212;
+    color: #eee;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    width: 230px;
+    background-color: #1f1f1f;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 1px solid #2b2b2b;
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.sidebar a {
+    display: block;
+    width: 100%;
+    color: #bbb;
+    text-decoration: none;
+    padding: 12px 20px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #007bff;
+    color: white;
+    padding-left: 25px;
+}
+
+.logout {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: #d63031;
+    padding: 12px 0;
+}
+
+.logout:hover {
+    background-color: #ff7675;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+    margin-left: 230px;
+    padding: 25px;
+    width: calc(100% - 230px);
+    background-color: #181818;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #00a8ff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+/* === TABLE === */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #1f1f1f;
+    color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #2d2d2d;
+}
+
+/* === BUTTON === */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #d63031;
+}
+
+.btn-delete:hover {
+    background-color: #ff7675;
+}
+
+.button-container {
+    text-align: center;
+}
+
+/* === FORM === */
+form {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
+    color: #eee;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+input, select, textarea {
+    width: 100%;
+    background-color: #2a2a2a;
+    border: none;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
