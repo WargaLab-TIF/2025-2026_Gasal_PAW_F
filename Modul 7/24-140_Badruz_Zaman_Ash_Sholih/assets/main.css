@@ -1,0 +1,139 @@
+/* ========= GLOBAL ========= */
+* {
+    font-family: verdana;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* lebih aman */
+}
+
+body {
+    background: #f9f9f9;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ========= NAVIGASI ATAS ========= */
+.nav-top {
+    width: 100%;
+    background: #007bff;   
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.nav-btn {
+    background: white;
+    color: #007bff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: #e5e5e5;
+}
+
+
+/* ========= TABEL ========= */
+.tabel {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabel th, .tabel td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.tabel th {
+    background: #eee;
+}
+
+/* ========= TOMBOL (a class="btn-xxx") ========= */
+.btn-report,
+.btn-print {
+    margin-left: 10px;
+}
+
+.btn-report,
+.btn-add,
+.btn-detail,
+.btn-delete,
+.btn-tampil,
+.btn-back,
+.btn-save,
+.btn-print,
+.btn-excel {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+button a {
+    text-decoration: none;
+}
+
+
+/* warna tombol */
+.btn-report { background: #007bff; }
+.btn-add    { background: #22c205; }
+.btn-detail { background: #28a745; }
+.btn-delete { background: #dc3545; }
+.btn-tampil { background: #4CAF50; }
+.btn-back   { background: #0022ff; }
+.btn-save   { background: #28a745; }
+.btn-print { background:#dea20b; }
+.btn-excel { background:#0E7F00; }
+
+/* efek hover */
+.btn-detail:hover { background: #1e7e34; }
+.btn-delete:hover { background: #a71d2a; }
+
+/* ========= FILTER BOX ========= */
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-box input[type="date"] {
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+/* ========= FORM BOX ========= */
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    width: 350px;
+    margin: auto;
+    border: 1px solid #ddd;
+}
+
+/* ========= CARD PUTIH ========= */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 95%;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
