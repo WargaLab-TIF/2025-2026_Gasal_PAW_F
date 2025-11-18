@@ -1,0 +1,326 @@
+/* ==========================================================
+   GLOBAL RESET + VARIABLES
+   ========================================================== */
+:root {
+    --bg: #f6f8fa;
+    --bg-card: #fff;
+    --text: #24292e;
+    --text-light: #6a737d;
+    --primary: #0366d6;
+    --primary-dark: #024ea3;
+    --danger: #d73a49;
+    --success: #28a745;
+    --radius: 8px;
+    --transition: 0.25s;
+    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 25px rgba(0,0,0,0.08);
+    --table-border: #e1e4e8;
+    --font-main: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Dark Mode ready (optional, auto applies if OS dark) */
+@media (prefers-color-scheme: dark){
+    :root {
+        --bg:#0d1117;
+        --bg-card:#161b22;
+        --text:#d9d9d9;
+        --text-light:#8b949e;
+        --primary:#2f81f7;
+        --table-border:#30363d;
+        --shadow:none;
+    }
+}
+
+/* Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    font-family:var(--font-main);
+    background:var(--bg);
+    color:var(--text);
+    padding:30px;
+    line-height:1.55;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+h1, h2, h3 {
+    margin-bottom:15px;
+    font-weight:600;
+}
+h2 {
+    font-size:28px;
+    letter-spacing:-.3px;
+}
+
+/* ==========================================================
+   FORM FILTER
+   ========================================================== */
+form {
+    background:var(--bg-card);
+    padding:15px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+form label {
+    font-weight:bold;
+}
+form input[type="date"] {
+    padding:7px 10px;
+    border:1px solid var(--table-border);
+    border-radius:var(--radius);
+}
+form button {
+    padding:8px 16px;
+}
+
+/* ==========================================================
+   BUTTON
+   ========================================================== */
+.button, button {
+    display:inline-block;
+    background:var(--primary);
+    padding:9px 16px;
+    color:white;
+    border:none;
+    border-radius:var(--radius);
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:500;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+.button:hover, button:hover {
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+.button.danger {
+    background:var(--danger);
+}
+.button.success {
+    background:var(--success);
+}
+
+/* Floating action button */
+.fab {
+    position:fixed;
+    bottom:35px;
+    right:35px;
+    background:var(--primary);
+    border-radius:50%;
+    width:58px;
+    height:58px;
+    font-size:32px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:var(--shadow-lg);
+    cursor:pointer;
+    color:white;
+}
+
+/* ==========================================================
+   TABLE
+   ========================================================== */
+table {
+    width:100%;
+    border-collapse:collapse;
+    background:var(--bg-card);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    margin-bottom:35px;
+}
+table th {
+    background:var(--primary);
+    color:white;
+    text-align:left;
+    padding:12px;
+    font-weight:600;
+}
+table td {
+    padding:12px 14px;
+    border-bottom:1px solid var(--table-border);
+}
+table tr:nth-child(even){
+    background:rgba(0,0,0,0.03);
+}
+table tr:hover{
+    background:rgba(0,0,0,0.05);
+}
+
+/* "Chip" style labels */
+.badge {
+    font-size:12px;
+    padding:4px 8px;
+    border-radius:5px;
+    background:var(--primary);
+    color:white;
+    display:inline-block;
+}
+
+/* ==========================================================
+   CARD STYLE WRAPPER
+   ========================================================== */
+.card {
+    background:var(--bg-card);
+    padding:18px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    margin-bottom:25px;
+}
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+.alert {
+    padding:15px;
+    border-radius:var(--radius);
+    margin-bottom:15px;
+    font-weight:500;
+}
+.alert.success {
+    background:rgba(40,167,69,.15);
+    color:var(--success);
+}
+.alert.error {
+    background:rgba(215,58,73,.15);
+    color:var(--danger);
+}
+
+/* ==========================================================
+   CHART CONTAINER
+   ========================================================== */
+canvas {
+    background:var(--bg-card);
+    padding:15px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    max-width:100%;
+}
+
+/* ==========================================================
+   PRINT MODE
+   ========================================================== */
+@media print {
+    body {
+        background:white;
+        color:black;
+    }
+    form, .button, .fab {
+        display:none !important;
+    }
+    table {
+        border:1px solid #000;
+        box-shadow:none;
+    }
+    table th {
+        background:#000 !important;
+        color:white !important;
+    }
+}
+
+/* ==========================================================
+   ANIMATION (not required but aesthetic)
+   ========================================================== */
+.fade-in {
+    animation:fade .6s ease;
+}
+@keyframes fade {
+    from {opacity:0; transform:translateY(8px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* ==========================================================
+   GRID SYSTEM (Custom, lightweight)
+   ========================================================== */
+.row {
+    display:flex;
+    gap:15px;
+}
+.col {
+    flex:1;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media(max-width:768px){
+    form {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .row {
+        flex-direction:column;
+    }
+    table {
+        font-size:14px;
+    }
+}
+
+/* ==========================================================
+   BONUS UI ELEMENTS (just for style richness)
+   ========================================================== */
+
+/* Glow effect optional */
+.glow:hover {
+    box-shadow:0 0 15px rgba(3,102,214,.5);
+}
+
+/* Input styling */
+input[type="text"], input[type="number"], select, textarea {
+    width:100%;
+    padding:8px 10px;
+    border:1px solid var(--table-border);
+    border-radius:var(--radius);
+    font-size:15px;
+    background:white;
+    transition:var(--transition);
+}
+input:focus, textarea:focus {
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 2px rgba(3,102,214,.2);
+}
+
+/* Pagination mock */
+.pagination {
+    display:flex;
+    gap:6px;
+    margin-top:12px;
+}
+.pagination a {
+    padding:6px 10px;
+    background:var(--bg-card);
+    text-decoration:none;
+    border:1px solid var(--table-border);
+    border-radius:5px;
+}
+.pagination a.active {
+    background:var(--primary);
+    color:white;
+}
+
+/* Tooltip example */
+.tooltip {
+    position:relative;
+}
+.tooltip:hover::after {
+    content:attr(data-text);
+    position:absolute;
+    background:black;
+    color:white;
+    padding:5px 10px;
+    border-radius:4px;
+    top:calc(100% + 4px);
+    left:0;
+    white-space:nowrap;
+}
