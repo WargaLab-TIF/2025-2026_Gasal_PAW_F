@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --danger-color: #e11d48;
+    --danger-hover: #be123c;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --border-color: #e5e7eb;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 24px;
+    line-height: 1.6;
+}
+
+/* --- CONTAINER & LAYOUT --- */
+.container {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 32px;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--text-dark);
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+/* --- BUTTONS --- */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+}
+
+.delete {
+    background-color: var(--danger-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.delete:hover {
+    background-color: var(--danger-hover);
+}
+
+/* --- TABEL --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    border-top: 1px solid var(--border-color);
+}
+
+tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* --- FORM --- */
+form {
+    margin-top: 0; 
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--bg-white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* --- CSS KHUSUS HALAMAN LAPORAN --- */
+
+.header-title {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    margin: -32px -32px 20px -32px;
+}
+
+.header-title h2 {
+    color: var(--bg-white);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-box {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.filter-item {
+    flex: 1;
+}
+
+.filter-box input,
+.filter-box button {
+    margin-bottom: 0;
+}
+
+.chart-container {
+    margin-bottom: 30px;
+    height: 400px;
+}
+
+/* Warna header tabel khusus laporan */
+.report-table th {
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+}
+
+.summary-container {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.summary-box {
+    flex: 1;
+    padding: 20px;
+    background-color: #eff6ff;
+    border-right: 1px solid #bfdbfe;
+}
+
+.summary-box:last-child {
+    border-right: none;
+}
+
+.summary-label {
+    font-weight: bold;
+    color: #1e3a8a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.summary-value {
+    font-size: 1.2rem;
+    color: #1f2937;
+}
+
+/* Tombol-tombol khusus */
+.btn-back { background-color: #6b7280; }
+.btn-pdf { background-color: #dc2626; margin-left: 10px; }
+.btn-excel { background-color: #16a34a; margin-left: 10px; }
+
+/* Helper classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.w-50 { width: 50px; }
+
+/* --- CSS MEDIA PRINT (PENTING UNTUK CETAK) --- */
+/* Bagian ini yang akan aktif saat tombol Cetak ditekan */
+@media print {
+    /* Sembunyikan tombol navigasi, filter, dan tombol cetak itu sendiri */
+    .nav-buttons, 
+    .filter-box, 
+    .button, 
+    a.button {
+        display: none !important;
+    }
+
+    /* Atur container agar lebar penuh dan bersih */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Pastikan warna background (seperti header biru) ikut tercetak */
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: white !important;
+        padding: 0 !important;
+    }
+
+    /* Header Title dipastikan nempel di atas */
+    .header-title {
+        margin: 0 0 20px 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    /* Pastikan grafik tidak terpotong */
+    .chart-container {
+        page-break-inside: avoid;
+    }
+}
