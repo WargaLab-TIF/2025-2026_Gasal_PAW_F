@@ -1,0 +1,151 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 20px;
+    /* BARU: Samakan background dengan form Anda */
+    background-color: #f4f6f8; 
+}
+
+h1 {
+    color: #409ac0;
+    margin-bottom: 25px;
+    text-align: center; /* BARU: Pusatkan judul utama */
+}
+
+table {
+    /* BARU: Atur lebar, pusatkan, dan beri bayangan */
+    width: auto; /* Biarkan lebar otomatis */
+    min-width: 700px; /* Beri lebar minimum agar tidak aneh */
+    max-width: 900px; /* Beri lebar maksimum */
+    margin: 0 auto; /* BARU: Pusatkan tabel */
+    
+    background-color: #ffffff;
+    border-radius: 8px; 
+    border-collapse: collapse; /* Penting untuk radius */
+    /* BARU: Beri bayangan agar "mengambang" */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+th {
+    background-color: #b1dcee; 
+    font-weight: bold;
+    padding: 15px;
+    text-align: left; /* BARU: Ratakan kiri agar sama dengan data */
+    /* border: 1px solid #ddd; */ /* DIHAPUS */
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    color: #555;
+    /* border: 1px solid #ddd; */ /* DIHAPUS */
+    
+    /* BARU: Hanya garis bawah tipis untuk pemisah */
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+/* BARU: Hilangkan garis bawah di baris data terakhir */
+tr:last-child td {
+    border-bottom: none;
+}
+
+th:last-child,
+td:last-child {
+    white-space: nowrap; 
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 14px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+/* Tombol Tambah Data (Hijau) */
+.btn-tambah {
+    background-color: #28a745;
+    font-size: 15px;
+}
+.btn-tambah:hover {
+    background-color: #218838;
+}
+.btn-tambah {
+    background-color: #28a745;
+    font-size: 15px;
+}
+.btn-tambah:hover {
+    background-color: #218838;
+}
+
+/* Tombol Hapus (Merah) */
+.btn-hapus {
+    background-color: #e74c3c;
+}
+.btn-hapus:hover {
+    background-color: #c0392b;
+}
+
+.btn-detail {
+    background-color: #17a2b8; /* Warna Biru Muda/Teal */
+}
+.btn-detail:hover {
+    background-color: #138496; /* Biru lebih gelap saat hover */
+}
+
+/* --- TAMBAHAN TOMBOL LAPORAN --- */
+
+/* Tombol Laporan (Warna Ungu/Indigo) */
+.btn-laporan {
+    background-color: #6c5ce7; 
+    font-size: 15px;
+    margin-right: 10px; /* Memberi jarak dengan tombol Tambah */
+}
+.btn-laporan:hover {
+    background-color: #5b4cc4; /* Ungu lebih gelap saat hover */
+}
+
+/* Agar tombol Laporan dan Tambah sejajar rapi di kanan */
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.error-container {
+    width: 500px;
+    margin: 20px auto; /* Pusatkan error juga */
+    background-color: #ffe5e5;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.error-container p {
+    color: red;
+    margin: 5px 0;
+}
+
+.error-container:empty {
+    display: none;
+}
+
+/* Header (dari perbaikan sebelumnya) */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    /* BARU: Buat header mengikuti lebar tabel */
+    width: auto;
+    min-width: 700px;
+    max-width: 900px;
+    margin: 0 auto 15px auto; /* Pusatkan header juga */
+}
+
+.header-container h2 {
+    margin: 0;
+    color: #409ac0;
+}

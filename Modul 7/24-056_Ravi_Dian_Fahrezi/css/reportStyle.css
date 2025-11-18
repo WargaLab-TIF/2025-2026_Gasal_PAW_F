@@ -1,0 +1,87 @@
+/* --- CSS KHUSUS HALAMAN LAPORAN (MODUL 7) --- */
+
+/* Container Utama Laporan */
+.report-container {
+    background: white;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.report-header-blue {
+    background-color: #007bff; /* Biru Header */
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.report-body {
+    padding: 20px;
+}
+
+/* Tombol-tombol Aksi */
+.btn-back {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-print { background-color: #ffc107; color: black; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 5px; }
+.btn-excel { background-color: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+/* Form Filter */
+.filter-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.input-date {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Area Grafik */
+.chart-container {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+/* Tabel Laporan */
+.table-report {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.table-report th { background-color: #d1ecf1; padding: 10px; text-align: left; border-bottom: 2px solid #bee5eb; }
+.table-report td { padding: 10px; border-bottom: 1px solid #eee; }
+
+/* Ringkasan Bawah (Total Pelanggan & Pendapatan) */
+.summary-box {
+    display: flex;
+    margin-top: 20px;
+    background-color: #d1ecf1; /* Warna biru muda sesuai gambar */
+    border-radius: 5px;
+    overflow: hidden;
+}
+.summary-item {
+    flex: 1;
+    padding: 15px;
+}
+.summary-label { font-weight: bold; display: block; margin-bottom: 5px; }
+.summary-value { font-size: 18px; }
