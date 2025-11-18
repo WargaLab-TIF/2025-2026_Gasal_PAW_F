@@ -1,0 +1,135 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+.header-nav {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav .brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.header-nav .menu a {
+  color: white;
+  margin-left: 15px;
+}
+
+.report-header {
+  background-color: #007bff; 
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.content-container {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-master-header {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+
+.action-buttons {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filter-form .form-control {
+  max-width: 150px;
+  min-width: 150px;
+}
+
+.table-transaksi {
+  margin-top: 0 !important;
+  border: none;
+  font-size: 0.9rem;
+}
+.table-transaksi thead th {
+  background-color: #add8e6 !important;
+  color: black !important;
+  font-weight: bold;
+  border: 1px solid #dee2e6;
+}
+.btn-detail {
+  background-color: #20b2aa; 
+  border-color: #20b2aa;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+.btn-hapus {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+
+/* Gaya Tabel Laporan */
+.chart-container {
+  height: 350px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.table-rekap thead th,
+.table-rekap tr td:first-child {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.table-total {
+  width: auto;
+  margin-top: 10px;
+  border-collapse: separate;
+}
+.table-total thead th {
+  background-color: #add8e6 !important;
+  color: black !important;
+  font-weight: bold;
+  border: 1px solid #dee2e6;
+}
+
+/* Gaya Print */
+@media print {
+  .no-print,
+  .header-nav {
+    display: none !important;
+  }
+  .content-container {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  canvas {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
