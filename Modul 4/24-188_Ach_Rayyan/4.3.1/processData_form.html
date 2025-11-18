@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data Pribadi</title>
+</head>
+<body>
+  <h2>Form Data Pribadi</h2>
+  <form action="processData.php" method="post">
+    Username: <br>
+    <input type="text" name="username"><br><br>
+
+    Email: <br>
+    <input type="email" name="email"><br><br>
+
+    Password: <br>
+    <input type="password" name="password"><br><br>
+
+    Alamat: <br>
+    <textarea name="alamat" rows="3"></textarea><br><br>
+
+    Semester: <br>
+    <select name="semester">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="3">4</option>
+      <option value="3">5</option>
+      <option value="3">6</option>
+      <option value="3">7</option>
+      <option value="3">8</option>
+    </select><br><br>
+
+
+     Country: <br>
+    <input type="hidden" name="country" value="Indonesia">
+    <br>
+
+    Kelamin: <br>
+    <input type="radio" name="gender" value="Laki-Laki"> Laki-Laki
+    <input type="radio" name="gender" value="Perempuan"> Perempuan<br><br>
+
+    Hobi: <br>
+    <input type="checkbox" name="hobi[]" value="Mancing"> Mancing <br>
+    <input type="checkbox" name="hobi[]" value="Tidur" > Tidur <br><br>
+
+    <input type="submit" value="Submit" style="background-color: rgb(74, 48, 221); color: white; padding: 10px 20px; border: none; cursor: pointer;">
+  </form>
+</body>
+</html>
