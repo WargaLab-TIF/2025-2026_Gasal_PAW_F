@@ -45,7 +45,7 @@ $sum = mysqli_fetch_assoc($summary);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laporan Transaksi</title>
+    <title>laporan_penjualan</title>
     <link rel="stylesheet" href="assets/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -144,4 +144,5 @@ $sum = mysqli_fetch_assoc($summary);
         </div>
     <?php endif; ?>
 </body>
+
 </html>
