@@ -37,7 +37,7 @@ if (isset($_POST['update'])) {
     $level    = $_POST['level'];
 
     if (!empty($_POST['password'])) {
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $password = md5($_POST['password']);
         mysqli_query($conn, "UPDATE user SET username='$username', password='$password', nama='$nama', alamat='$alamat', hp='$hp', level='$level' WHERE id_user='$id'");
     } else {
         mysqli_query($conn, "UPDATE user SET username='$username', nama='$nama', alamat='$alamat', hp='$hp', level='$level' WHERE id_user='$id'");
