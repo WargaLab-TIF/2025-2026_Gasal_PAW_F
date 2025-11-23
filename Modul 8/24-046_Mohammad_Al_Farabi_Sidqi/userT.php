@@ -18,7 +18,7 @@ if (isset($_GET['hapus'])) {
 
 if (isset($_POST['tambah'])) {
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = md5($_POST['password']);
     $nama     = $_POST['nama'];
     $alamat   = $_POST['alamat'];
     $hp       = $_POST['hp'];
