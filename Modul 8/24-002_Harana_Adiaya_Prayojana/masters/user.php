@@ -1,0 +1,97 @@
+<?php
+session_start();
+require_once('../include/conn.php');
+
+if(!isset($_SESSION['username'])){
+    header("Location: ../login.php");
+    exit;
+}
+
+$user= $_SESSION['username'];
+$sql="SELECT * FROM user WHERE username='$user'";
+$tem=mysqli_query($koneksi, $sql);
+$lev=mysqli_fetch_array($tem);
+$wewenang=$lev['level'];
+
+if ($wewenang > 1){
+    $_SESSION['pesan']="Anda Bukan owner";
+    header("Location: ../login.php");
+    exit;
+};
+
+if(isset($_GET['delete'])){
+    $id = (int)$_GET['delete'];
+    $sql_hapus="DELETE FROM user WHERE id_user=$id";
+    mysqli_query($koneksi, $sql_hapus);
+    mysqli_query($koneksi,"ALTER TABLE user AUTO_INCREMENT = 1;");
+    header("Location: user.php"); 
+    exit;
+}
+
+$sql = "SELECT b.id,
+               b.nama_barang,
+               b.harga,
+               b.stok,
+               s.nama
+            FROM barang b
+            JOIN supplier s ON s.id = b.supplier_id";
+$res = mysqli_query($koneksi, $sql);
+?>
+<!doctype html>
+<html>
+<head>
+    <title>Crud User</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<main class="layout">
+    <?php if(isset($_SESSION['username'])):?>
+    <h2>SISTEM PENJUALAN</h2>
+    <div style="display:flex; align-items:center; margin-bottom:10px;">
+        <h3>Selamat Datang: <?=$lev['nama']?></h3>
+    </div>
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.php">Home</a></li>
+            <?php if ($wewenang == 1): ?>
+            <li><a href="barang.php">Barang</a></li>
+            <li><a href="supplier.php">Supplier</a></li>
+            <li><a href="pelanggan.php">Pelanggan</a></li>
+            <li><a href="user.php">User</a></li>
+            <?php endif; ?>
+            <li><a href="../laporan/report_transaksi.php">Laporan</a></li>
+            <li><a href="../Transaksi/transaksi.php">Transaksi</a></li>
+            <li><a href="../include/logOut.php">LogOut</a></li>
+        </ul>
+    </nav>
+    <br>
+    <form action="adding.php" ><button class="adding">Tambah User</button></form>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>No</th><th>username</th><th>Nama</th><th>Level</th><th>Tindakan</th>
+        </tr>
+        <?php
+            $res = mysqli_query($koneksi, "SELECT * FROM user");
+            $no=1;
+            while($row = mysqli_fetch_array($res)):
+        ?>
+        <tr>
+            <td><?=$no++;?></td>
+            <td><?=$row['username']?></td>
+            <td><?=$row['nama']?></td>
+            <td><?=$row['level']?></td>
+            <td>
+                <div style="display:flex; align-items:center; margin-bottom:10px; justify-content: space-between;">
+                    <button class="detail" onclick="location.href=''">Edit</button>
+                    <button class="del" onclick="if(confirm('Yakin ingin hapus Username <?=$row['username']?>')) location.href='?delete=<?=$row['id_user']?>'">Hapus</button>
+                </div>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+    <?php endif;?>
+</main>
+</body>
+</html>
