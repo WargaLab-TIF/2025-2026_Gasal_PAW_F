@@ -1,0 +1,161 @@
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.tambah { 
+    background: #5cb85c; 
+    color: white;
+    padding: 9px 16px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600; 
+}
+.tambah:hover {
+    background: #4a934a;
+}
+
+.edit { 
+    background: #17a2b8; 
+    color: white;
+    padding: 6px 12px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.edit:hover {
+    background: #138496;
+}
+
+.hapus { 
+    background: #dc3545; 
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.hapus:hover {
+    background: #c82333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white; 
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 0; 
+}
+
+th { 
+    background: #e9ecef; 
+    color: #212529;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td form {
+    display: inline-block;
+    margin: 0 3px;
+}
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+.container h2 { 
+    font-size: 20px;
+    font-weight: bold;
+    background: #0275d8;
+    padding: 20px 20px;
+    color: white;
+    border-radius: 6px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.form-container {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-width: 600px;
+}
+.form-container h3 {
+    margin-top: 0;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    /* display: block; */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn-simpan {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.btn-batal {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 13.33px;
+}
+.alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
