@@ -13,7 +13,7 @@ $nama  = $_SESSION['nama'];
     <title>Dashboard Sistem</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff; }
-        .navbar { background-color: #31708f; overflow: hidden; padding: 0 20px; } /* Warna Biru sesuai TPP8 */
+        .navbar { background-color: #31708f; overflow: hidden; padding: 0 20px; }
         .navbar a { float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; }
         .navbar a:hover, .dropdown:hover .dropbtn { background-color: #245269; }
         .dropdown { float: left; overflow: hidden; }
@@ -59,4 +59,5 @@ $nama  = $_SESSION['nama'];
 </div>
 
 </body>
+
 </html>
