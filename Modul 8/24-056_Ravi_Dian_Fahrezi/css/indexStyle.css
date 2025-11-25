@@ -1,0 +1,130 @@
+/* --- RESET & BODY --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; /* Reset margin body menjadi 0 agar navbar nempel ke atas */
+    padding-top: 70px; /* Beri jarak konten dari atas agar tidak tertutup navbar */
+    background: #f5f5f5;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+    background-color: #409ac0; /* Warna biru senada dengan h1 */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* Memisahkan Kiri dan Kanan */
+    padding: 0 20px;
+    position: fixed; /* Agar navbar tetap diatas saat scroll */
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Link Navbar Biasa */
+.navbar a.nav-item {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .nav-select:hover {
+    background-color: #357f9e; /* Warna sedikit lebih gelap saat hover */
+}
+
+.nav-select {
+    margin-top: 4.5px;
+    background: #409ac0;
+    color: white;
+    border: none;
+    padding: 14px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* Dropdown Kanan (User) supaya menunya tidak keluar layar */
+.right-align {
+    right: 20px; 
+}
+
+/* --- KONTEN HALAMAN (YANG LAMA) --- */
+
+.header-container {
+    max-width: 930px;
+    margin-left: 35px;
+    /* Flexbox untuk menata Judul dan Tombol Tambah */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #409ac0;
+    margin: 0;
+}
+
+/* Tombol Tambah Data agar sejajar h1 */
+.btn-tambah {
+    background-color: #28a745;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* PEMBATAS LEBAR AGAR TABEL TIDAK TERLALU LEBAR */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+th {
+    background-color: #b1dcee;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px;
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+/* Tombol Aksi */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-tambah:hover { background-color: #218838; }
+
+.btn-edit { background-color: #f39c12; }
+.btn-edit:hover { background-color: #e67e22; }
+
+.btn-hapus { background-color: #e74c3c; }
+.btn-hapus:hover { background-color: #c0392b; }

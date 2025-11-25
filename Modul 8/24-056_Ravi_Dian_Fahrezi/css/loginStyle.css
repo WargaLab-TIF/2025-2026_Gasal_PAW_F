@@ -1,0 +1,76 @@
+/* === GLOBAL === */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* === CARD LOGIN === */
+.login-container {
+    background: white;
+    width: 340px;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* === TITLE === */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+/* === LABEL === */
+.login-container label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* === INPUT === */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* === BUTTON === */
+.login-container button,
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.login-container button:hover,
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* === ERROR BOX === */
+.error {
+    background-color: #ffe5e5;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 6px;
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+}
