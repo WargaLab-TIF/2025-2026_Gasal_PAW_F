@@ -1,0 +1,73 @@
+/* === RESET & BASIC === */
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f4f6f9; display: flex; min-height: 100vh; }
+
+/* === LAYOUT UTAMA (SIDEBAR + CONTENT) === */
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    flex-shrink: 0;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto; /* Agar sidebar bisa di-scroll jika menu panjang */
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px); /* Mencegah tabel melebar keluar */
+}
+
+/* === SIDEBAR MENU === */
+.sidebar h2 { text-align: center; font-size: 20px; margin-bottom: 20px; border-bottom: 1px solid #4b545c; padding-bottom: 15px; }
+.sidebar a { display: block; padding: 12px 20px; color: #c2c7d0; text-decoration: none; transition: 0.3s; border-bottom: 1px solid #3f474e; }
+.sidebar a:hover { background-color: #494e53; color: #fff; padding-left: 25px; }
+.sidebar .menu-label { padding: 15px 20px 5px; font-size: 12px; color: #bbb; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; }
+.btn-logout { background: #d9534f; text-align: center; color: white !important; font-weight: bold; }
+
+/* === LOGIN PAGE === */
+body.login-mode { display: flex; justify-content: center; align-items: center; background: #e9ecef; }
+.login-box { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 350px; }
+.login-box h2 { text-align: center; margin-top: 0; color: #333; }
+
+/* === FORMS & CARDS === */
+.card { background: white; padding: 25px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin-bottom: 25px; }
+.card h3 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; color: #444; }
+
+input[type="text"], input[type="password"], input[type="number"], input[type="date"], select, textarea {
+    width: 100%; padding: 10px; margin: 8px 0 15px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+
+/* === TABLES === */
+table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #007bff; color: white; }
+tr:hover { background-color: #f1f1f1; }
+
+/* === BUTTONS === */
+.btn, .btn-tambah, .btn-kembali, .btn-simpan, .btn-hapus, .btn-edit, .btn-detail, .btn-laporan {
+    padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; color: white; font-size: 14px; display: inline-block; margin-right: 5px; text-align: center;
+}
+
+/* Warna Tombol */
+.btn-blue, .btn-simpan, .btn-tambah, .btn-primary { background-color: #007bff; } 
+.btn-red, .btn-hapus, .btn-danger { background-color: #dc3545; } 
+.btn-orange, .btn-edit, .btn-detail { background-color: #ffc107; color: #333 !important; } 
+.btn-gray, .btn-kembali, .btn-batal, .btn-secondary { background-color: #6c757d; color: white !important;}
+.btn-green, .btn-laporan { background-color: #28a745; }
+
+.btn:hover, .btn-tambah:hover { opacity: 0.9; }
+
+/* Layout Filter Laporan */
+.filter-form { display: flex; align-items: center; gap: 10px; background: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+.filter-form input { margin: 0; width: auto; }
+
+/* PRINT MODE */
+@media print {
+    .sidebar, .btn, .filter-form, .btn-kembali, .btn-logout { display: none !important; }
+    .content { margin-left: 0; width: 100%; padding: 0; }
+    .card { box-shadow: none; border: none; padding: 0; }
+}
